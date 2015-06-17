@@ -1,0 +1,10 @@
+- hosts: all
+  sudo: yes
+  tasks:
+    - apt: name={{ item }} state=present update_cache=true
+      with_items: 
+        - git
+        - tmux
+        - vim
+        - openjdk-8-jdk
+        - maven3
