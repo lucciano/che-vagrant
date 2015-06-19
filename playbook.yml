@@ -7,4 +7,9 @@
         - tmux
         - vim
         - openjdk-8-jdk
-        - maven3
+
+    - get_url: 
+          url=http://mirrors.dcarsat.com.ar/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
+          dest=/root/apache-maven-3.3.3-bin.tar.gz mode=0440
+
+    - shell: src=/root/apache-maven-3.3.3-bin.tar.gz dest=/usr/bin/ copy=no
